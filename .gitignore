@@ -11,6 +11,9 @@
 # next.js
 /.next/
 /out/
+/wwwroot/
+wwwroot.zip
+wwwroot.rar
 
 # production
 /build
