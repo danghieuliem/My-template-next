@@ -1,27 +1,34 @@
 module.exports = {
   root: true,
-  extends: [
-    'next',
-    'prettier',
-    'next/core-web-vitals',
-    'eslint-config-prettier',
-    'eslint:recommended',
-    'plugin:react/recommended',
-    'plugin:@typescript-eslint/recommended-type-checked',
-    'plugin:@typescript-eslint/recommended',
+  plugins: ['react', 'react-hooks', 'jest', '@typescript-eslint', '@emotion'],
+  parser: '@typescript-eslint/parser',
+  overrides: [
+    {
+      files: ['*.ts', '*.tsx'],
+      extends: [
+        'next',
+        'prettier',
+        'next/core-web-vitals',
+        'eslint-config-prettier',
+        'eslint:recommended',
+        'plugin:react/recommended',
+        'plugin:@typescript-eslint/recommended',
+        'plugin:@typescript-eslint/recommended-type-checked',
+      ],
+
+      parserOptions: {
+        ecmaVersion: 11,
+        sourceType: 'module',
+        requireConfigFile: false,
+        project: ['./tsconfig.json'],
+      },
+    },
   ],
-  plugins: ['react', 'react-hooks', 'jest', '@typescript-eslint'],
   settings: { react: { version: 'detect' } },
   ignorePatterns: ['/public/'],
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    ecmaVersion: 11,
-    sourceType: 'module',
-    requireConfigFile: false,
-    project: true,
-  },
   rules: {
     '@typescript-eslint/no-unused-vars': ['error'],
+    '@emotion/jsx-import': 'error',
     'no-var': 'error',
     'no-constant-condition': 'error',
     'no-dupe-args': 'error',

@@ -1,0 +1,22 @@
+.main {
+  @apply flex min-h-screen flex-col items-center justify-between p-24;
+}
+.title {
+  @apply text-6xl text-blue-400;
+}
+.menuTitle {
+  @apply text-3xl;
+}
+.menu {
+  @apply grid grid-cols-1 gap-4;
+}
+.menuItem {
+  @apply bg-teal-400 p-4 text-black;
+}
+
+.titleDemoFetch {
+  @apply text-6xl text-blue-400;
+}
+.dataDemoFetch {
+  @apply grid grid-cols-2;
+}

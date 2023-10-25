@@ -1,13 +1,19 @@
 {
+  "cSpell.words": ["paren", "Parens", "tailwindcss"],
+  "css.customData": [".vscode/tailwind.json"],
+
   "eslint.validate": ["javascript"],
+  "eslint.workingDirectories": [{ "mode": "auto" }],
+
   "editor.insertSpaces": true,
   "editor.tabSize": 2,
   "editor.trimAutoWhitespace": true,
   "editor.rulers": [80, 100, 120],
-  "cSpell.words": ["paren", "Parens", "tailwindcss"],
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  },
-  "eslint.workingDirectories": [{ "mode": "auto" }]
+    "source.fixAll": true,
+    "source.organizeImports": true,
+    "source.sortMembers": true
+  }
 }
